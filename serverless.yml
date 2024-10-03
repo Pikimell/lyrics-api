@@ -1,5 +1,5 @@
-org: author
-service: AWS-BACKEND
+org: pikimell
+service: lyrics-api
 
 frameworkVersion: '3'
 
@@ -13,7 +13,7 @@ provider:
   runtime: nodejs18.x
   region: us-east-2
   stage: dev
-  profile: serverlessTemplate
+  profile: serverlessUser
   timeout: 20
 
 functions:

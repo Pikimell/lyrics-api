@@ -35,7 +35,7 @@ export const getPlayListService = async (id) => {
   return playlist;
 };
 
-export const listPlayListsService = async () => {
-  const playlists = await PlaylistCollection.find();
+export const listPlayListsService = async (userId) => {
+  const playlists = await PlaylistCollection.find({ owner: userId });
   return playlists;
 };

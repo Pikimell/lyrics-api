@@ -37,6 +37,7 @@ export const getPlaylistController = async (event, context) => {
 };
 
 export const listPlaylistsController = async (event, context) => {
-  const result = await listPlayListsService();
+  const { userId } = event.queryStringParameters || {};
+  const result = await listPlayListsService(userId);
   return response(200)(result);
 };
