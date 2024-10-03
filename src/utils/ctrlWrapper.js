@@ -17,9 +17,9 @@ export const errorHandler = (err) => {
     return {
       statusCode: err.status,
       headers: {
-        'Access-Control-Allow-Origin': '*', // Разрешить запросы с любых источников
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization', // Разрешить необходимые заголовки
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', // Разрешить необходимые методы
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
       },
       body: JSON.stringify({
         status: err.status,
@@ -32,9 +32,9 @@ export const errorHandler = (err) => {
   return {
     statusCode: 500,
     headers: {
-      'Access-Control-Allow-Origin': '*', // Разрешить запросы с любых источников
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization', // Разрешить необходимые заголовки
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', // Разрешить необходимые методы
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
     },
     body: JSON.stringify({
       status: 500,

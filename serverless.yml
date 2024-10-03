@@ -17,34 +17,42 @@ provider:
   timeout: 20
 
 functions:
-  templateGet:
-    handler: src/handlers/templates/getTemplateHandler.getTemplateHandler
+  createPlaylist:
+    handler: src/handlers/playlistHandlers.createPlaylistHandler
     events:
       - http:
-          path: template
-          method: get
-          cors: true
-
-  templatePost:
-    handler: src/handlers/templates/createTemplateHandler.createTemplateHandler
-    events:
-      - http:
-          path: templates
+          path: playlists
           method: post
           cors: true
 
-  templatePut:
-    handler: src/handlers/templates/putTemplateHandler.putTemplateHandler
+  updatePlaylist:
+    handler: src/handlers/playlistHandlers.updatePlaylistHandler
     events:
       - http:
-          path: templates/{templateId}
+          path: playlists/{id}
           method: put
           cors: true
 
-  templateDelete:
-    handler: src/handlers/templates/deleteTemplateHandler.deleteTemplateHandler
+  deletePlaylist:
+    handler: src/handlers/playlistHandlers.deletePlaylistHandler
     events:
       - http:
-          path: templates/{templateId}
+          path: playlists/{id}
           method: delete
+          cors: true
+
+  getPlaylist:
+    handler: src/handlers/playlistHandlers.getPlaylistHandler
+    events:
+      - http:
+          path: playlists/{id}
+          method: get
+          cors: true
+
+  listPlaylists:
+    handler: src/handlers/playlistHandlers.listPlaylistsHandler
+    events:
+      - http:
+          path: playlists
+          method: get
           cors: true
